@@ -19,13 +19,13 @@ instalacion Linux:
 pip3 install cryptography
 
 2.
-git clone https://github.com/Valbef/multicifrado.git
+git clone https://github.com/Valbef/multiencriptado.git
 
 Para usarlo:
 
-cd multicifrado
+cd multiencriptado
 
-python3 multicifrado.py
+python3 multiencriptado.py
 
 ===================================================
 
@@ -34,14 +34,14 @@ Instalacion en Termux:
 pkg update
 pkg install python-cryptography
 
-git clone https://github.com/Valbef/multicifrado.git
+git clone https://github.com/Valbef/multiencriptado.git
 
 
 Para usarlo:
 
-cd multicifrado
+cd multiencriptado
 
-python3 multicifrado.py
+python3 multiencriptado.py
 
 ===============================================
 
