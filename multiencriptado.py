@@ -10,6 +10,7 @@ from cryptography.hazmat.primitives.ciphers.aead import (
     AESOCB3
 )
 
+
 # ==========================
 # DERIVACIÓN DE CLAVE
 # ==========================
@@ -18,23 +19,25 @@ def derivar_clave(password, salt):
     kdf = Scrypt(
         salt=salt,
         length=32,
-        n=2**14,
+        n=2 ** 14,
         r=8,
         p=1
     )
 
     return kdf.derive(password.encode())
+
 
 def derivar_clave_siv(password, salt):
     kdf = Scrypt(
         salt=salt,
         length=64,
-        n=2**14,
+        n=2 ** 14,
         r=8,
         p=1
     )
 
     return kdf.derive(password.encode())
+
 
 # ==========================
 # AES-256-GCM
@@ -249,16 +252,17 @@ def descifrar_ocb(datos, password):
 
     return texto.decode()
 
-#===============================
+
+# ===============================
 # Limpiar pantalla
-#===============================
+# ===============================
 
 
 def limpiar_pantalla():
     os.system("cls" if os.name == "nt" else "clear")
 
 
-#def reiniciar_programa():
+# def reiniciar_programa():
 #    os.execl(
 #        sys.executable,
 #        sys.executable,
@@ -271,7 +275,7 @@ def limpiar_pantalla():
 
 while True:
 
-    print("\n=== SISTEMA DE CIFRADO ===")
+    print("\n=== SISTEMA DE ENCRIPTADO ===")
     print("1 - AES-256-GCM")
     print("2 - ChaCha20-Poly1305")
     print("3 - AES-CCM")
@@ -287,16 +291,15 @@ while True:
 
     if algoritmo == "6":
         limpiar_pantalla()
-        #reiniciar_programa()
+        # reiniciar_programa()
         continue
-        
 
     if algoritmo not in ("1", "2", "3", "4", "5"):
         print("Algoritmo no válido")
         continue
 
-    print("\n1 - Cifrar")
-    print("2 - Descifrar")
+    print("\n1 - Encriptar")
+    print("2 - Desencriptar")
 
     accion = input("Acción: ").strip()
 
@@ -335,7 +338,7 @@ while True:
 
     else:
 
-        texto = input("Texto cifrado: ")
+        texto = input("Texto encriptado: ")
 
         try:
 
