@@ -275,7 +275,10 @@ def limpiar_pantalla():
 
 while True:
 
-    print("\n=== SISTEMA DE ENCRIPTADO ===")
+    print("\n=============================")
+    print("=== SISTEMA DE ENCRIPTADO ===")
+    print("   By:Valbef       v1.0.0")
+    print("=============================\n")
     print("1 - AES-256-GCM")
     print("2 - ChaCha20-Poly1305")
     print("3 - AES-CCM")
@@ -284,7 +287,7 @@ while True:
     print("6 - Limpiar terminal")
     print("0 - Salir")
 
-    algoritmo = input("Algoritmo: ").strip()
+    algoritmo = input("Selecciona un algoritmo: ").strip()
 
     if algoritmo == "0":
         break
